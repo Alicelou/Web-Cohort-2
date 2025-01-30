@@ -11,6 +11,7 @@ typeof "potato";
 // What is the output of each of the expressions below?
 
 typeof 15;
+
 console.log(typeof 15);
 // Prediction: number
 // Actual: number
@@ -75,6 +76,7 @@ console.log(99 * "luftbaloons");
 // Prediction: NaN
 // Actual: NaN
 
+
 // Data Structures
 
 // Arrays
@@ -102,13 +104,20 @@ console.log(numbers);
 
 var morse = ["dot", "pause", "dot"];
 var moreMorse = morse.join(" dash ");
+
 //moreMorse.split(" ");
+
+moreMorse.split(" ");
+
 
 // Your answer goes here.
 //dot, pause, dot, dash
 // What will the contents of the below array be after the below code sample is executed? Come up with an answer yourself before testing it out in the console.
+
 console.log(moreMorse);
 //dot dash pause dash dot
+
+
 
 var bands = [];
 var beatles = ["Paul", "John", "George", "Pete"];
@@ -119,7 +128,9 @@ bands[bands.length - 1].pop();
 bands[0].shift();
 bands[1][3] = "Ringo";
 
+
 //bands = [["Mick", "Keith", "Ronnie", "Charlie"], ["Paul", "John", "George", "Ringo"]]
+
 // Your answer goes here.
 console.log(bands);
 console.log(bands.map((innerArray) => innerArray.join(", ")));
@@ -132,6 +143,7 @@ console.log(bands.map((innerArray) => innerArray.join(", ")));
 
 // OR
 true || true;
+
 console.log(true || true);
 // Prediction: true
 // Actual: true
@@ -202,11 +214,13 @@ console.log(1 && 5);
 
 function giveDogATreat(dog) {
   // You logic goes here
+
   if (dog.weight > 50) {
     console.log("Have a bone!");
   } else {
     console.log("Have a biscuit!");
   }
+
 }
 
 // Now a dog must sit or shake to get a treat
@@ -216,6 +230,7 @@ function giveDogATreat(dog) {
 
 function giveDogATreatAfterTrick(dog) {
   // Your logic goes here
+
   if (dog.canSit || dog.canShake) {
     console.log("Have some treat!");
   } else {
