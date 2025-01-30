@@ -1,3 +1,4 @@
+//resubmit commit and push request
 // Web Cohort 1 Exercise 1
 
 // For each expression, predict what you think the output will be in a comment (`//`) ***without first running the command***. Then run the expression in the console. Note the actual output in a comment and compare it with your prediction.
@@ -10,56 +11,71 @@ typeof "potato";
 // What is the output of each of the expressions below?
 
 typeof 15;
-// Prediction:
-// Actual:
+
+console.log(typeof 15);
+// Prediction: number
+// Actual: number
 
 typeof 5.5;
-// Prediction:
-// Actual:
+console.log(typeof 5.5);
+// Prediction: number
+// Actual: number
 
 typeof NaN;
-// Prediction:
-// Actual:
+console.log(typeof NaN);
+// Prediction: null
+// Actual: number
 
 typeof "hello";
-// Prediction:
-// Actual:
+console.log(typeof "hello");
+// Prediction: string
+// Actual: string
 
 typeof true;
-// Prediction:
-// Actual:
+console.log(typeof true);
+// Prediction: boolean
+// Actual: boolean
 
 typeof (1 != 2);
-// Prediction:
-// Actual:
+console.log(typeof (1 != 2));
+// Prediction: boolean
+// Actual: boolean
 
 "hamburger" + "s";
-// Prediction:
-// Actual:
+console.log("hamburger" + "s");
+// Prediction: hamburgers
+// Actual: hamburgers
 
 "hamburgers" - "s";
-// Prediction:
-// Actual:
+console.log("hamburger" - "s");
+// Prediction: hamburger
+// Actual: NaN
 
 "1" + "3";
-// Prediction:
-// Actual:
+console.log("1" + "3");
+// Prediction: 13
+// Actual: 13
 
 "1" - "3";
-// Prediction:
-// Actual:
+console.log("1" - "3");
+// Prediction: -2
+// Actual:-2
 
 "johnny" + 5;
-// Prediction:
+console.log("johnny" + 5);
+// Prediction: johnny5
 // Actual:
 
 "johnny" - 5;
-// Prediction:
-// Actual:
+console.log("johnny" - 5);
+// Prediction: NaN
+// Actual: NaN
 
 99 * "luftbaloons";
-// Prediction:
-// Actual:
+console.log(99 * "luftbaloons");
+// Prediction: NaN
+// Actual: NaN
+
 
 // Data Structures
 
@@ -81,16 +97,27 @@ numbers.push(10);
 numbers.unshift(3);
 
 // Your answer goes here.
-
+// [3, 2, 4, 6, 10]
 // What is the return value of the below code sample? Come up with an answer yourself before testing it out in the console.
+console.log(numbers);
+//[3, 2, 4, 6, 10]
 
 var morse = ["dot", "pause", "dot"];
 var moreMorse = morse.join(" dash ");
+
+//moreMorse.split(" ");
+
 moreMorse.split(" ");
 
-// Your answer goes here.
 
+// Your answer goes here.
+//dot, pause, dot, dash
 // What will the contents of the below array be after the below code sample is executed? Come up with an answer yourself before testing it out in the console.
+
+console.log(moreMorse);
+//dot dash pause dash dot
+
+
 
 var bands = [];
 var beatles = ["Paul", "John", "George", "Pete"];
@@ -101,7 +128,14 @@ bands[bands.length - 1].pop();
 bands[0].shift();
 bands[1][3] = "Ringo";
 
+
+//bands = [["Mick", "Keith", "Ronnie", "Charlie"], ["Paul", "John", "George", "Ringo"]]
+
 // Your answer goes here.
+console.log(bands);
+console.log(bands.map((innerArray) => innerArray.join(", ")));
+//(2) [Array(4), Array(4)]
+//(2) ['Mick, Keith, Ronnie, Charlie', 'Paul, John, George, Ringo']
 
 // Booleans & Comparison Operators
 
@@ -109,53 +143,66 @@ bands[1][3] = "Ringo";
 
 // OR
 true || true;
-// Prediction:
-// Actual:
+
+console.log(true || true);
+// Prediction: true
+// Actual: true
 
 true || false;
-// Prediction:
-// Actual:
+console.log(true || false);
+// Prediction: true
+// Actual: true
 
 false || true;
-// Prediction:
-// Actual:
+console.log(false || true);
+// Prediction: true
+// Actual: true
 
 false || false;
-// Prediction:
-// Actual:
+console.log(false || false);
+// Prediction: false
+// Actual: false
 
 3 || 3;
-// Prediction:
-// Actual:
+console.log(3 || 3);
+// Prediction: 3
+// Actual: 3
 
 1 || 5;
-// Prediction:
-// Actual:
+console.log(1 || 5);
+// Prediction: false
+// Actual: 1
 
 // AND
 true && true;
-// Prediction:
-// Actual:
+console.log(true && true);
+// Prediction: true
+// Actual: true
 
 true && false;
-// Prediction:
-// Actual:
+console.log(true && false);
+// Prediction: false
+// Actual: false
 
 false && true;
-// Prediction:
-// Actual:
+console.log(false && true);
+// Prediction: false
+// Actual: false
 
 false && false;
-// Prediction:
-// Actual:
+console.log(false && false);
+// Prediction: false
+// Actual: false
 
 3 && 3;
-// Prediction:
-// Actual:
+console.log(3 && 3);
+// Prediction: 3
+// Actual: 3
 
 1 && 5;
-// Prediction:
-// Actual:
+console.log(1 && 5);
+// Prediction: ??
+// Actual: 5
 
 // Chained Logic
 
@@ -167,6 +214,13 @@ false && false;
 
 function giveDogATreat(dog) {
   // You logic goes here
+
+  if (dog.weight > 50) {
+    console.log("Have a bone!");
+  } else {
+    console.log("Have a biscuit!");
+  }
+
 }
 
 // Now a dog must sit or shake to get a treat
@@ -176,4 +230,24 @@ function giveDogATreat(dog) {
 
 function giveDogATreatAfterTrick(dog) {
   // Your logic goes here
+
+  if (dog.canSit || dog.canShake) {
+    console.log("Have some treat!");
+  } else {
+    dog.canSit = true;
+    dog.canShake = true;
+    giveDogATreatAfterTrick(dog);
+  }
 }
+
+//check if the code works
+
+// Dog1 weights over 50 lb, and it can't sit or shake
+const dog1 = { weight: 60, canSit: false, canShake: false };
+giveDogATreat(dog1);
+giveDogATreatAfterTrick(dog1);
+
+// Dog2 weights under 50 lb, and it can sit
+const dog2 = { weight: 40, canSit: true, canShake: false };
+giveDogATreat(dog2);
+giveDogATreatAfterTrick(dog2);
